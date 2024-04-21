@@ -94,8 +94,11 @@
       </select>
       <label for="Diseases">How many diseases are you suffering from?</label>
       <input type="number" id="Diseases" name="Diseases" min="0" max="10" placeholder="Number of diseases" required>
-      <label for="DiseaseName">Enter the name of disease:</label>
-      <input type="text" id="DiseaseName" name="DiseaseName" placeholder="Disease name" required>
+      <div class="disease-container">
+        <label for="disease-count">Enter the number of diseases:</label>
+        <input type="number" id="disease-count" name="disease-count" min="1" max="10">
+        <div id="Diseases"></div>
+      </div>
       <div class="btn-box">
         <button type="button" id="Previous1">Previous</button>
         <button type="button" id="Next2">Next</button>
