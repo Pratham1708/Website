@@ -249,6 +249,14 @@
   .btn-box button:last-child {
     top: 5px; /* move the "Next" button up by 5px */
   }
+
+  .disease-container {
+    margin-bottom: 1rem;
+  }
+  
+  .disease-container select {
+    margin-top: 0.5rem;
+  }
     /* ====================================== FORM ==============================================*/
     /* ====================================== FAQs ==============================================*/
 
