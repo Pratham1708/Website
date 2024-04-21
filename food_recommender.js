@@ -27,3 +27,29 @@ Previous2.onclick = function(){
    step3.style.top = "550px";
    progress.style.width = "340px";
 }
+
+const diseaseCountInput = document.getElementById("disease-count");
+const diseaseSelectsContainer = document.getElementById("Diseases");
+
+diseaseCountInput.addEventListener("change", () => {
+  // Clear the existing select elements
+  diseaseSelectsContainer.innerHTML = "";
+
+  // Generate the specified number of select elements
+  for (let i = 0; i < diseaseCountInput.value; i++) {
+    const select = document.createElement("select");
+    select.name = `Disease-${i}`;
+    select.id = `Disease-${i}`;
+    select.innerHTML = `
+      <option value="malnutrition">Malnutrition</option>
+      <option value="diabetes">Diabetes</option>
+      <option value="thyroid">Thyroid</option>
+      <option value="heart-disease">Heart Disease</option>
+      <option value="stroke">Stroke</option>
+      <option value="kidney-diseases">Kidney Diseases</option>
+      <option value="obese">Obese</option>
+      <option value="overweight">Overweight</option>
+    `;
+    diseaseSelectsContainer.appendChild(select);
+  }
+});
